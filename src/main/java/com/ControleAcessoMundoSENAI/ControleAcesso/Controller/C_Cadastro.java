@@ -18,7 +18,9 @@ public class C_Cadastro {
                                   @RequestParam("nome") String nome,
                                   @RequestParam("cpf") int cpf,
                                   @RequestParam("email") String email,
-                                  @RequestParam("telefone") int telefone) {
+                                  @RequestParam("telefone") int telefone,
+                                  @RequestParam("senha") String senha,
+                                  @RequestParam("confSenha") String confSenha) {
         return "Cadastro/cad_pessoa";
     }
 }
