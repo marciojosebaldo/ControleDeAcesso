@@ -11,9 +11,9 @@ Comandos Banco de Dados:
 
 CREATE TABLE pessoa(
 id SERIAL PRIMARY KEY,
-nome VARCHAR(255) NOT null,
-cpf bigint not null,
-telefone bigint,
-email varchar(255),
-senha varchar(255) NOT NULL
+nome VARCHAR(255) NOT NULL UNIQUE,
+cpf BIGINT NOT NULL,
+telefone BIGINT,
+email VARCHAR(255),
+senha VARCHAR(255) NOT NULL
 )
