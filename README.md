@@ -14,5 +14,7 @@ id SERIAL PRIMARY KEY,
 nome VARCHAR(255) not null,
 cpf bigint not null,
 telefone bigint,
-email varchar(255)
+email varchar(255),
+senha varchar(255),
+confSenha varchar(255)
 )
