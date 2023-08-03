@@ -7,7 +7,7 @@ Dependências: Spring Web, PostgreSQL Driver, Spring Data JPA, Spring Session e 
 
 --
 
-Comandos Banco de Dados:
+Comandos para criação das tabelas do Banco de Dados:
 
 CREATE TABLE pessoa(
 id SERIAL PRIMARY KEY,
