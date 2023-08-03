@@ -12,7 +12,7 @@ public class M_Pessoa {
     private String nome;
     private Long cpf;
     private String email;
-    private String telefone;
+    private Long telefone;
     private String senha;
 
     public Long getId() {
@@ -47,11 +47,11 @@ public class M_Pessoa {
         this.email = email;
     }
 
-    public String getTelefone() {
+    public Long getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(Long telefone) {
         this.telefone = telefone;
     }
 
