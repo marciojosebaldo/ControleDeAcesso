@@ -10,7 +10,7 @@ public class C_Cadastro {
 
     @GetMapping("/cadastro")
     public String cadastro(){
-        return "Cadastro/cad_pessoa";
+        return "Cad_Pessoa/cad_pessoa";
     }
 
     @PostMapping("/cadastro")
@@ -21,6 +21,6 @@ public class C_Cadastro {
                                   @RequestParam("telefone") int telefone,
                                   @RequestParam("senha") String senha,
                                   @RequestParam("confSenha") String confSenha) {
-        return "Cadastro/cad_pessoa";
+        return "";
     }
 }
