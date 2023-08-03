@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class S_Pessoa {
-    private R_Pessoa r_pessoa;
+    private static R_Pessoa r_pessoa;
 
     public S_Pessoa(R_Pessoa r_pessoa) {
         this.r_pessoa = r_pessoa;
@@ -26,7 +26,13 @@ public class S_Pessoa {
         m_pessoa.setEmail(email);
         m_pessoa.setTelefone(Long.valueOf(telefone));
         m_pessoa.setSenha(senha);
+        r_pessoa.save(m_pessoa);
 
         return "Cadastro realizado com suscesso";
+    }
+
+    public static M_Pessoa inserirPessoa(String nome, String cpf, String email, String telefone, String senha) {
+
+        return inserirPessoa
     }
 }

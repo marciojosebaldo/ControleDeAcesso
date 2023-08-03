@@ -1,5 +1,6 @@
 package com.ControleAcessoMundoSENAI.ControleAcesso.Controller;
 
+import com.ControleAcessoMundoSENAI.ControleAcesso.Service.S_Pessoa;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,11 +17,11 @@ public class C_Cadastro {
     @PostMapping("/cadastro")
     public String cadastrarPessoa(@RequestParam("id") String id,
                                   @RequestParam("nome") String nome,
-                                  @RequestParam("cpf") int cpf,
+                                  @RequestParam("cpf") String cpf,
                                   @RequestParam("email") String email,
-                                  @RequestParam("telefone") int telefone,
-                                  @RequestParam("senha") String senha,
-                                  @RequestParam("confSenha") String confSenha) {
-        return "";
+                                  @RequestParam("telefone") String telefone,
+                                  @RequestParam("senha") String senha) {
+        S_Pessoa.cadastrarPessoa(nome, cpf, email, telefone, senha);
+        return "redirect:/";
     }
 }
