@@ -14,12 +14,6 @@ public class S_Pessoa {
 
     public static String cadastrarPessoa(String nome, String cpf, String email, String telefone, String senha) {
 
-        /*
-        Atividade:
-        Design-patern para e-mail e cpf
-        Validação do banco de dados
-        */
-
         M_Pessoa m_pessoa = new M_Pessoa();
         m_pessoa.setNome(nome);
         m_pessoa.setCpf(Long.valueOf(cpf)); /*Converte o long para String*/
@@ -29,10 +23,5 @@ public class S_Pessoa {
         r_pessoa.save(m_pessoa);
 
         return "Cadastro realizado com suscesso";
-    }
-
-    public static M_Pessoa inserirPessoa(String nome, String cpf, String email, String telefone, String senha) {
-
-        return inserirPessoa
     }
 }
