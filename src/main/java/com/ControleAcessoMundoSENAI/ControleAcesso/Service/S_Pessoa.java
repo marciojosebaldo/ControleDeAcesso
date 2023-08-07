@@ -16,7 +16,7 @@ public class S_Pessoa {
 
         M_Pessoa m_pessoa = new M_Pessoa();
         m_pessoa.setNome(nome);
-        m_pessoa.setCpf(Long.valueOf(cpf)); /*Converte o long para String*/
+        m_pessoa.setCpf(Long.valueOf(cpf));
         m_pessoa.setEmail(email);
         m_pessoa.setTelefone(Long.valueOf(telefone));
         m_pessoa.setSenha(senha);
