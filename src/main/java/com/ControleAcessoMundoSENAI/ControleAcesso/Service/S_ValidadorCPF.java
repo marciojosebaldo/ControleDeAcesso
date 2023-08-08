@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class S_ValidadorCPF {
 
-        public static boolean validateCpf(String cpf) {
+        public static boolean validarCpf(String cpf) {
             // Remova caracteres não numéricos do CPF
             cpf = S_LimpaNumero.limpar(cpf);
 
