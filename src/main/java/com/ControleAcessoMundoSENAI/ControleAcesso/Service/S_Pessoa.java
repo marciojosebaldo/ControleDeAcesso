@@ -12,7 +12,9 @@ public class S_Pessoa {
         this.r_pessoa = r_pessoa;
     }
 
-    public static String cadastrarPessoa(String nome, String cpf, String email, String telefone, String senha) {
+    public static String cadastrarPessoa(String nome, String cpf, String email, String telefone, String senha, String confSenha) {
+
+        if ()
 
         M_Pessoa m_pessoa = new M_Pessoa();
         m_pessoa.setNome(nome);
