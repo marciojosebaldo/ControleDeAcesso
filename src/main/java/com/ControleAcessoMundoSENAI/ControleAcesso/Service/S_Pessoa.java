@@ -42,7 +42,11 @@ public class S_Pessoa {
             m_pessoa.setNome(nome);
             m_pessoa.setCpf(Long.valueOf(S_LimpaNumero.limpar(cpf)));
             m_pessoa.setEmail(email);
-            m_pessoa.setTelefone(Long.valueOf(S_LimpaNumero.limpar(telefone)));
+            if (telefone == "") {
+                m_pessoa.setTelefone(null);
+            } else {
+                m_pessoa.setTelefone(Long.valueOf(S_LimpaNumero.limpar(telefone)));
+            }
             m_pessoa.setSenha(senha);
             r_pessoa.save(m_pessoa);
             mensagem += "Cadastro realizado com sucesso";
