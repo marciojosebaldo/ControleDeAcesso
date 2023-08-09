@@ -1,5 +1,6 @@
 package com.ControleAcessoMundoSENAI.ControleAcesso.Controller;
 
+import com.ControleAcessoMundoSENAI.ControleAcesso.Model.M_Resposta;
 import com.ControleAcessoMundoSENAI.ControleAcesso.Service.S_Pessoa;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +33,7 @@ public class C_Pessoa {
                                @RequestParam("email") String email,
                                @RequestParam("senha") String senha,
                                @RequestParam("confSenha") String confSenha) {
-        S_Pessoa.cadastrarPessoa(nome, cpf, email, telefone,senha, confSenha);
+        M_Resposta m_resposta = S_Pessoa.cadastrarPessoa(nome, cpf, email, telefone,senha, confSenha);
         return "redirect:/";
     }
 }

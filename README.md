@@ -12,7 +12,7 @@ Comandos para criação das tabelas do Banco de Dados:
 CREATE TABLE pessoa(
 	id SERIAL PRIMARY KEY,
 	nome VARCHAR(255) NOT NULL UNIQUE,
-	cpf bigint not null,
+	cpf bigint NOT NULL UNIQUE,
 	telefone bigint,
 	email varchar(255), 
 	senha varchar(255) NOT NULL)
