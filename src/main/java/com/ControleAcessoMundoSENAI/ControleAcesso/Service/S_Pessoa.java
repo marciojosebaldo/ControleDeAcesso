@@ -15,7 +15,6 @@ public class S_Pessoa {
     }
 
     public static M_Resposta cadastrarPessoa(String nome, String cpf, String email, String telefone, String senha, String confSenha) {
-
         String mensagem = "";
         boolean podeSalvar = true;
 
