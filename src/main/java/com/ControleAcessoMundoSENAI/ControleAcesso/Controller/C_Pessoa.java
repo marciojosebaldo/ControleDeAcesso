@@ -38,7 +38,7 @@ public class C_Pessoa {
 
         if(m_resposta.getStatus()) {
             model.addAttribute("mensagem",m_resposta.getMensagem());
-            return "redirect:/";
+            return "Login/login";
         } else {
             model.addAttribute("mensagem",m_resposta.getMensagem());
             return "Cad_Pessoa/cad_pessoa";
