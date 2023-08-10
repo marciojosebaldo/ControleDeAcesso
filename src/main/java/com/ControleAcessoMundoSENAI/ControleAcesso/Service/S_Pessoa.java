@@ -19,22 +19,22 @@ public class S_Pessoa {
         boolean podeSalvar = true;
 
         if (!senha.equals(confSenha) || senha == null || senha.trim().equals("")) {
-            mensagem += "Senha e confirmação devem ser iguais ou a senha deve ser informada";
+            mensagem += "Senha e confirmação devem ser iguais ou a senha deve ser informada<br/>";
             podeSalvar = false;
         }
 
         if (!S_ValidadorCPF.validarCpf(cpf)) {
-            mensagem += "CPF inválido";
+            mensagem += "CPF inválido<br/>";
             podeSalvar = false;
         }
 
         if (nome == null || nome.trim().equals("")) {
-            mensagem += "O nome precisa ser informado";
+            mensagem += "O nome precisa ser informado<br/>";
             podeSalvar = false;
         }
 
         if ((email == null || email.trim().equals("")) && (telefone == null || telefone.trim().equals(""))) {
-            mensagem += "E-mail ou telefone precisa ser informado";
+            mensagem += "E-mail ou telefone precisa ser informado<br/>";
             podeSalvar = false;
         }
 
@@ -54,7 +54,7 @@ public class S_Pessoa {
                 r_pessoa.save(m_pessoa);
                 mensagem += "Cadastro realizado com sucesso";
             } catch (DataIntegrityViolationException e) {
-                mensagem += e.getMessage();
+                mensagem += e.getMessage()+"<br/>";
                 podeSalvar = false;
             }
         }

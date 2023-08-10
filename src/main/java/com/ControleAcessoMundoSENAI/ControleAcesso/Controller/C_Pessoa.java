@@ -37,6 +37,7 @@ public class C_Pessoa {
         M_Resposta m_resposta = S_Pessoa.cadastrarPessoa(nome, cpf, email, telefone,senha, confSenha);
 
         if(m_resposta.getStatus()) {
+            model.addAttribute("mensagem",m_resposta.getMensagem());
             return "redirect:/";
         } else {
             model.addAttribute("mensagem",m_resposta.getMensagem());

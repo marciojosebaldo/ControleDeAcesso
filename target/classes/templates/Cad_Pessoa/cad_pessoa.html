@@ -23,7 +23,7 @@
 
 <body>
 <div class="container">
-    <div th:if="${mensagem}" th:text="${mensagem}"></div>
+    <div th:if="${mensagem}" th:utext="${mensagem}"></div>
     <h1 class="text-center mt-3">Cadastrar-se no Evento</h1>
     <form action="/cadastro" method="post">
         <div class="row">
