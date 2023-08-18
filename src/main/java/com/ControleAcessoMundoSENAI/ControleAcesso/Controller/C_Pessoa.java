@@ -1,9 +1,10 @@
 package com.ControleAcessoMundoSENAI.ControleAcesso.Controller;
 
 import com.ControleAcessoMundoSENAI.ControleAcesso.Model.M_Resposta;
+import com.ControleAcessoMundoSENAI.ControleAcesso.Service.S_Login;
 import com.ControleAcessoMundoSENAI.ControleAcesso.Service.S_Pessoa;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,8 +20,17 @@ public class C_Pessoa {
 
     @PostMapping("/")
     public String loginPessoa(@RequestParam("usuario") String usuario,
-                              @RequestParam("senha") String senha) {
-        return "Home/home";
+                              @RequestParam("senha") String senha,
+                              HttpSession session) {
+
+        session.setAttribute("usuario", S_Login.validaLogin(usuario, senha));
+
+        if (session.getAttribute("usuario") != null) {
+            return "redirect:/Home";
+        } else {
+            return "redirect:/";
+        }
+
         // Controller passar para o serviço para tratar a validação lógica. O Service fará a checagem com o Repository buscar os dados. Retorna ao serviço
         // Ao não encontrar as informações, será impedido o login
         // Deverá criar um método com a Session para manter o usuário logado e não precisar logar a cada página acessada. A sessão expira por um tempo determinado
