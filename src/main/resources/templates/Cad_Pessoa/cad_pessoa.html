@@ -82,7 +82,8 @@
         </div>
     </form>
 </div>
-<script>
+<script type="text/javascript">
+
     $(document).ready(function() {
         $('#cpf').on('focusout', function() {
             var cpf = $('#cpf').val();
@@ -97,7 +98,7 @@
         });
 
         function validarFormulario() {
-            if (senhaDiferente()) {
+            if (senhaDiferente() && isValidCPF(cpf)) {
                 return true;
             } else {
                 return false;

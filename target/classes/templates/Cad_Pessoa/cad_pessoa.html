@@ -25,7 +25,7 @@
 <div class="container">
     <div th:if="${mensagem}" th:utext="${mensagem}"></div>
     <h1 class="text-center mt-3">Cadastrar-se no Evento</h1>
-    <form action="/cadastro" method="post">
+    <form action="/cadastro" method="post" onsubmit="return validarFormulario();">
         <div class="row">
             <div class="col-sm-8">
                 <div class="input-group mb-3">
@@ -95,6 +95,13 @@
             }
 
         });
+
+        function validarFormulario() {
+            if (senhaDiferente() && isValidCPF(cpf)) {
+                return true;
+            } else {
+                return false;
+        }
 
         function senhaDiferente() {
             const senhaInput = $("#senha");
